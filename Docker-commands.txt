@@ -7,7 +7,7 @@ Explanation: The above command builds the docker image called student-testapp in
 Explanation: The above command lists all Docker images that are available on the machine.
 
 3. docker run -p 5000:5000 student-testapp
-Explanation:  The above command runs a container based on the student-testapp image, and maps port 5000 of the host machine to port 5000 of the container (for external access).
+Explanation:  This command runs the container image locally.
 
 4. curl http://localhost:5000/student
 Explanation: The command above is used to test the service.

@@ -9,7 +9,7 @@ Explanation: This command verifies that the minikube cluster is running and its 
 3. kubectl config use-context handshake-exercise
 Explanation: To change context to the handshake-exercise cluster
 
-The following Docker commands were used to build and run the application:
+These kubectl commands were used to create the kubernetes resources and also to get them:
 
 1. kubectl apply -f k8s-manifest/deployment.yaml
 Explanation: This command creates the kubernetes deployment for the microservice

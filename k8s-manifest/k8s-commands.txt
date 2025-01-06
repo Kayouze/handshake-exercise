@@ -6,6 +6,9 @@ Explanation:This command sets up a minikube cluster named handshake-exercise.
 2. minikube status --profile=handshake-exercise
 Explanation: This command verifies that the minikube cluster is running and its components are operational.
 
+3. kubectl config use-context handshake-exercise
+Explanation: To change context to the handshake-exercise cluster
+
 The following Docker commands were used to build and run the application:
 
 1. kubectl apply -f k8s-manifest/deployment.yaml

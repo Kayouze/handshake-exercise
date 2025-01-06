@@ -9,14 +9,20 @@ Action:
 To achieve the objectives of the given task, the following actions were taken:
 
 1. The creation of the following documents:
+   
 a. An app.py file for creating the microservice application source code with python
+
 b. A Dockerfile to build and package the application’s source code into a Docker image for deployment.
+
 c. A Docker-command.txt file providing the commands used to build and run the app, and test the service, as requested in task instructions.
+
 d. A deployment.yaml and service.yaml file located in the k8s-manifest, to deploy the microservice and create a service to expose it.
+
 e. A k8s-command.txt file to showcase the commands used to deploy the resources and test that the installations are successful.
+
 f. A build-and-deploy.sh file containing commands to automate the building and deployment of the microservice into a Kubernetes cluster using shell script.
 
-2. app.py
+3. app.py
 -	Python programming language was used to develop (a flask app) the source code for the microservice, a flask app was utilized because its light weight, easy to build, and docker, is docker and k8s friendly.
 
 -	The app has an endpoint, /student, which when accessed via a GET request, it responds with a JSON object: {"student_status": "hired"} and an HTTP status code of 200 (see line 5-7 of app.py file). 

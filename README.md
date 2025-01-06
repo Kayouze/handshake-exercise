@@ -43,8 +43,23 @@ To achieve the objectives of the given task, the following actions were taken:
 -	and CMD ["python", "app.py"] was important because it starts the Flask application when the container is launched, making the service available to handle requests.
 
 4. K8s-manifest
+- This file contains commands that make up the deployment.yaml and service.yaml, which describes the deployment specifications for the student-testapp application, and the service that exposes the deployed application within the cluster to the internet.
+  
+- it is also made up of the k8s-command.txt file which contains the commands responsible for setting up installations and creating the cluster.
+  
+- in specifics, the name of the deployment was set to student-testapp-deployment, with namespace put as default, as there is no isolation requirement for this application.
+  
+- replicas were put at 1, due to the requirements of this task, the image was referenced using my dockerhub username kayuze and the image tag (student-testapp:latest), allowing for k8s to successfully pull the docker image from the docker hub repository.
+  
+- for additional secuirity, the container was set to run as a non-root, despite earlier specifications in the dockerfile. The application was set to listen on port 5000.
+  
+- The service was set with "student-test-app-service as name, and the selector was set as student-test app to match the pods as labelled in the deployment manifest.
+  
+- the communication protocol (TCP) was set exposed at port 80, the default http port, to enhance easy access and use by clients.
+  
+- the target port was set as 5000, where the containers run, just as specified in the deployment manifest. It will help maintain user-friendly access through service port 80, while the service handles routing to the correct container port (5000). 
 
-5. build-and-deploy.sh
+6. build-and-deploy.sh
 -	one of the most important properties of the created shell script is its abilty to handle error, hence the reason for "set -e" in the line 3 of the file. this command stops deployment immediately an error is encountered to prevent further deployment of a dysfunctional container. 
 
 -	Line 6 of the K8s-manifest is used to build the image, and line 9 Ensures that the Minikube cluster is running, and If it's not running, kickstarts the Minikube cluster, setting the cluster name as handshake-exercise.

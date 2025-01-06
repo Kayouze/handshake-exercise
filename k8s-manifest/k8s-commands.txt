@@ -1,0 +1,27 @@
+The following code was used to start the minikube cluster after installation on local machine:
+
+1. minikube start --profile=handshake-exercise
+Explanation:This command sets up a minikube cluster named handshake-exercise.
+
+2. minikube status --profile=handshake-exercise
+Explanation: This command verifies that the minikube cluster is running and its components are operational.
+
+The following Docker commands were used to build and run the application:
+
+1. kubectl apply -f k8s-manifest/deployment.yaml
+Explanation: This command creates the kubernetes deployment for the microservice
+
+2. kubectl get deployments
+Explanation: This command lists all the k8s deployments in the current namespace,verifing that the deployment is created successfully.
+
+3. kubectl apply -f k8s-manifest/service.yaml 
+Explanation:This command applies the service manifest (service.yaml) located in the k8s-manifest directory, exposing the microservice.
+
+4. kubectl get service
+Explanation: This command lists all the Kubernetes services in the current namespace, Verifing that the service is created successfully.
+
+5. kubectl get pods
+Explanation: This command lists all the pods currently running in the Kubernetes cluster, ensuring if the pods are running or not.
+
+6. kubectl port-forward service/student-testapp-service 8080:80
+Explanation: This command forwards a local port (8080) on your machine to the service port (80) of the student-testapp-service (enables local access).

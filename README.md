@@ -69,6 +69,7 @@ To achieve the objectives of the given task, the following actions were taken:
 -	"kubectl port-forward service/student-testapp-service 8080:80" is to allow access to the application running in the Kubernetes cluster through http://localhost:8080.
 
   Note: To test application after successful deployment run http://localhost:8080/student or http://localhost:5000/student
+  
   Further instructions for local and cluster development can be found in the docker-command and k8s-manifest-command text files.
 
 

@@ -1,9 +1,11 @@
 # handshake-exercise
 Objective: 
+
 The objective of this task was to create a containerized microservice that returns a JSON response ({"student_status": "hired"}) to GET requests on the /student endpoint and deploy it locally using Kubernetes.
 Additionally, the task involved creating a single shell script that automates building, packaging, deploying the application, configuring the Minikube cluster, and ensuring the web server endpoint is accessible.
 
 Action:
+
 To achieve the objectives of the given task, the following actions were taken:
 
 1. The creation of the following documents:

@@ -21,3 +21,15 @@ spec:
         securityContext:
           runAsNonRoot: true
           runAsUser: 1000
+        livenessProbe:
+          httpGet:
+            path: /student
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /student
+            port: 5000
+          initialDelaySeconds: 3
+          periodSeconds: 5

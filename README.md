@@ -55,7 +55,7 @@ To achieve the objectives of the given task, see steps below:
 
 - This script file will also apply the kubernetes manifest (deployment.yaml and service.yaml) in the k8s-manifest folder and port forward the service using the command kubectl port-forward service/student-testapp-service 8080:80 to allow access to the application running in the Kubernetes cluster.
 
-  Note: To test application after successful deployment run http://localhost:5000/student or http://localhost:8080/student 
+  Note: To test application after successful deployment run http://localhost:8080/student 
   
   Further instructions for local and cluster development can be found in the docker-command and k8s-manifest-command text files.
   
